@@ -7,7 +7,7 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col justify-start items-center w-full h-full text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-900">
-      <article className="flex flex-col justify-center items-center w-full h-full pr-2 pl-2 w-full lg:max-w-xl xl:max-w-2xl">
+      <article className="flex flex-col justify-center items-center w-full h-full pr-2 pl-2 lg:max-w-xl xl:max-w-2xl">
         <h1 className="text-3xl font-bold">Web Clipboard 📋</h1>
 
         <section className="flex flex-col justify-start items-start mt-6">
