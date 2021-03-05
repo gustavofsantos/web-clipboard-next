@@ -5,12 +5,9 @@ import { ClipboardItem } from 'types/clipboard'
 export function useClipboardCreator() {
   const { user } = useAuth()
 
-
   return useMutation(
     'clipboardItemCreator',
-    (
-      payload: Required<Pick<ClipboardItem, 'value'>>
-    ): Promise<ClipboardItem> =>
+    (payload: Required<Pick<ClipboardItem, 'value'>>): Promise<ClipboardItem> =>
       fetch('/api/create', {
         method: 'POST',
         headers: {

@@ -4,14 +4,14 @@ export function ClipboardItems() {
   const items = useClipboardItems()
 
   return (
-    <section>
+    <section className="w-full">
       {items.isLoading && <span>Loading</span>}
       {items.isSuccess && !items.data.length && <span>No items yet!</span>}
       {items.isSuccess && !!items.data.length && (
-        <ul>
+        <ul className="w-full space-y-2">
           {items.data.map((item) => (
-            <li key={item.id}>
-              <div>{item.value}</div>
+            <li key={item._id}>
+              <p className="font-bold text-lg">{item.value}</p>
             </li>
           ))}
         </ul>
