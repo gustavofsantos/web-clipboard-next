@@ -6,7 +6,7 @@ export default function HomePage() {
   const { user, login } = useAuth()
 
   return (
-    <main className="w-full h-full bg-gray-50 dark:bg-gray-900">
+    <main className="w-full h-full text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-900">
       <header className="flex w-full">
         <nav className="flex">
           {!user && <button onClick={login}>Enter</button>}

@@ -23,14 +23,14 @@ export function ClipboardCreateItem() {
         id="create-item-input"
         value={value}
         onChange={(ev) => setValue(ev.target.value)}
-        className="w-full p-2 rounded border border-gray-200 dark:border-gray-800"
+        className="w-full p-2 rounded text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800"
         rows={3}
       />
 
       <div className="pt-2 pb-2" />
 
       <button
-        className="pt-2 pb-2 pr-4 pl-4 rounded text-bold text-white disabled:opacity-50 dark:text-blue-900 bg-blue-600 dark:bg-blue-300 "
+        className="pt-2 pb-2 pr-4 pl-4 rounded font-bold text-white disabled:opacity-50 dark:text-blue-900 bg-blue-600 dark:bg-blue-300"
         disabled={mutation.isLoading || !value.length}
       >
         {mutation.isLoading ? 'Creating...' : 'Create'}
