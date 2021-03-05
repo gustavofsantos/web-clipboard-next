@@ -6,7 +6,7 @@ import Head from 'next/head'
 
 export default function AppPage() {
   useNotLoggedRedirect()
-  const { user } = useAuth()
+  const { user, logout } = useAuth()
 
   return (
     <>
@@ -15,6 +15,10 @@ export default function AppPage() {
       </Head>
       <main className="flex flex-col justify-start items-center w-full h-full text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-900">
         <article className="flex flex-col justify-start items-center pr-2 pl-2 w-full lg:max-w-xl xl:max-w-2xl">
+          <header className="flex justify-end items-center w-full p-2">
+            <button onClick={logout}>Logout</button>
+          </header>
+
           <div className="p-6" />
           <h1 className="text-3xl font-bold">Web Clipboard 📋</h1>
 
